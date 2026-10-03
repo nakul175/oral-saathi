@@ -1,0 +1,44 @@
+{
+  "id": "oral-saathi",
+  "name": "Oral Saathi",
+  "organisation": "Mukha Digital Health",
+  "color": "#175cba",
+  "topic": "Oral lesion assessment",
+  "description": "Document a persistent mouth sore and arrange clinical review.",
+  "input": "symptoms",
+  "model": "Whisper tiny multilingual",
+  "modelRole": "Speech-to-text for worker-reviewed oral symptoms; no image-based cancer prediction.",
+  "source": "https://github.com/openai/whisper",
+  "fields": [
+    [
+      "duration",
+      "Sore present for (days)",
+      "number",
+      0,
+      365
+    ],
+    [
+      "difficulty",
+      "Difficulty swallowing or opening the mouth",
+      "boolean"
+    ],
+    [
+      "bleeding",
+      "Unexplained bleeding",
+      "boolean"
+    ],
+    [
+      "tobacco",
+      "Tobacco use reported",
+      "boolean"
+    ]
+  ],
+  "sample": {
+    "duration": 21,
+    "difficulty": false,
+    "bleeding": false,
+    "tobacco": true
+  },
+  "note": "A mouth sore has persisted for three weeks. Tobacco use reported. No difficulty swallowing.",
+  "guidance": "https://www.mohfw.gov.in/sites/default/files/NP-NCD%20Operational%20Guidelines.pdf"
+}
